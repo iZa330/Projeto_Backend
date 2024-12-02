@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    color: #666666;
+    margin: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #1a5276;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #145a7c;
+}
+

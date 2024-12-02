@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Questionários</title>
+    <link rel="stylesheet" href="css/index.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Gestão de Questionários</h1>
+
+        <h2>Último Questionário Preenchido</h2>
+        <div id="ultimoQuestionario">
+            <!-- As informações serão preenchidas aqui dinamicamente -->
+        </div>
+
+        <h2>Ações</h2>
+        <ul>
+            <li><a href="questionario.html" target="_blank">Preencher Novo Questionário</a></li>
+            <li><a href="todos-questionarios.html" target="_blank">Ver Todos os Questionários</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Função para preencher os dados do último questionário
+        function carregarUltimoQuestionario() {
+            fetch('/questionario/ultimo')
+                .then(response => response.json())
+                .then(data => {
+                    const ultimoQuestionarioDiv = document.getElementById('ultimoQuestionario');
+                    
+                    // Cria o conteúdo para exibir
+                    const content = `
+                        <div class="question-answer-pair">
+                            <span class="question">Nome Completo:</span>
+                            <span class="answer">${data.nomeCompleto}</span>
+                        </div>
+                        <div class="question-answer-pair">
+                            <span class="question">Exercício Favorito:</span>
+                            <span class="answer">${data.exercicioFavorito}</span>
+                        </div>
+                        <div class="question-answer-pair">
+                            <span class="question">Grupo Muscular Favorito:</span>
+                            <span class="answer">${data.grupoMuscularFavorito}</span>
+                        </div>
+                        <div class="question-answer-pair">
+                            <span class="question">Horas de Sono:</span>
+                            <span class="answer">${data.horasSono}</span>
+                        </div>
+                    `;
+                    
+                    // Insere o conteúdo no elemento #ultimoQuestionario
+                    ultimoQuestionarioDiv.innerHTML = content;
+                })
+                .catch(error => console.error('Erro ao carregar o último questionário:', error));
+        }
+
+        // Carregar as informações ao carregar a página
+        window.onload = carregarUltimoQuestionario;
+    </script>
+</body>
+</html>

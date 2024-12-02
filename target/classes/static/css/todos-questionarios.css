@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1a5276;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border: none;
+    vertical-align: top;
+}
+
+th {
+    background-color: #d6eaf8;
+    color: #2c3e50;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-radius: 5px;
+}
+
+td {
+    background-color: #eaf2f8;
+    color: #2c3e50;
+    border: 1px solid #d6eaf8;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+tr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+td {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.message {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.message.success {
+    color: #2ecc71;
+}
+
+.message.error {
+    color: #e74c3c;
+}
+
+nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #1a5276;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #145a7c;
+}
+
+/* Layout para exibir pergunta e resposta lado a lado */
+.question-answer-pair {
+    display: flex;
+    flex-wrap: wrap; /* Garante que se necessário, vai quebrar para a linha seguinte */
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.question-answer-pair .question {
+    font-weight: bold;
+    flex-basis: 30%;
+    background-color: #d6eaf8; /* Destaque para a pergunta */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.question-answer-pair .answer {
+    flex-basis: 65%; /* A resposta ocupa o restante do espaço */
+    background-color: #eaf2f8; /* Evidência para a resposta */
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.message.success {
+    color: #2ecc71;
+}
+
+.message.error {
+    color: #e74c3c;
+}
+.quest-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a5276;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Estilo para a linha de divisão mais evidenciada */
+.divider {
+    border: 0;
+    border-top: 3px solid #3498db; /* Linha mais espessa e de cor azul */
+    margin: 20px 0;
+    width: 100%;
+}
